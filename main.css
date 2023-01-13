@@ -1,0 +1,38 @@
+
+#chuck1 {
+    border: white;
+    height: 300px;
+    width: 250px;
+    border-radius: 100px;
+
+}
+
+#categories {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.olivetti {
+    font-size: 0.5 rem;
+    font-family: monospace;
+    color: var(#ffffff);
+    width:400ch;
+    animation: olivetti 5s steps(30), pampalluga 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(#ffffff);
+    word-wrap: break-word;
+}
+
+@keyframes olivetti{
+    from {
+        width: 0;
+    }
+}
+
+@keyframes pampalluga {
+    50%{
+        border-color: transparent;
+    }
+}
