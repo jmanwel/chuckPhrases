@@ -2,5 +2,6 @@
 Funny phrases from Chuck Norris
 
 Phrases are separated by categories.
+url: https://jmanwel.github.io/chuckPhrases/
 
-Source: https://api.chucknorris.io
+API Source: https://api.chucknorris.io
