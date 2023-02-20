@@ -1,10 +1,23 @@
+:root {
+	--tetx: #000000;
+	--bg: #ffffff;
+}
+
+body {
+	box-sizing: border-box;
+	min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+	align-items: flex-center;
+    background-color: var(--bg);
+	color: var(--text);    
+}
 
 #chuck1 {
-    border: white;
-    height: 300px;
-    width: 250px;
+    border: var(--text);
+    height: 400px;
+    width: 350px;
     border-radius: 100px;
-
 }
 
 #categories {
@@ -14,16 +27,39 @@
 }
 
 .olivetti {
-    font-size: 0.5 rem;
-    font-family: monospace;
-    color: var(#ffffff);
-    width:400ch;
-    animation: olivetti 5s steps(30), pampalluga 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid var(#ffffff);
+	font-size: 1.5rem;
+	font-family: monospace;
+	color: var(--text);
+	width: 50%;
+	animation: olivetti 6s steps(30), pampalluga 0.5s step-end infinite alternate;
+	overflow: hidden;
+    border-right: 2px solid var(--text);
     word-wrap: break-word;
+    --r: 30px;
+    --b: 8px;
+    --s: 55px;
+    --a: 90deg;
+    --c: linear-gradient(60deg,black, black);
+    max-width: 410px;
+    padding: calc(var(--r) + var(--b));
+    position: relative;
 }
+
+.olivetti::before {
+    content: "";
+    position: absolute;
+    inset: calc(-1*var(--s));
+    border-radius: calc(var(--r) + var(--s));
+    border: var(--s) solid #0000;
+    padding: var(--b);
+    background: var(--c) border-box;
+    --_m:/100% var(--s) no-repeat conic-gradient(from calc(var(--a)/-2),#000 var(--a),#0000 0),linear-gradient(#000 0 0);
+    -webkit-mask: 
+      50% calc(100% - var(--b)) var(--_m) content-box, 
+      bottom var(--_m) padding-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 
 @keyframes olivetti{
     from {
